@@ -1,0 +1,30 @@
+body {
+    background : ghostwhite;
+    font-size  : 40px;
+    height     : 1023px;
+}
+
+#app {
+    height : 100%;
+}
+
+#header {
+    background : gray;
+    height     : 100px;
+    color      : white;
+}
+
+#navBar {
+    background : yellow;
+    width      : 100px;
+    height     : 100%;
+    color      : white;
+    float      : left;
+}
+
+#main {
+    background : green;
+    height     : 100%;
+    width      : 100%;
+    color      : white;
+}
