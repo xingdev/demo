@@ -1,14 +1,18 @@
-import _ from 'lodash'
 export function createNavBar () {
   var navBar = document.createElement('div')
   navBar.setAttribute('id', 'navBar')
-  navBar.innerHTML = _.join(['bar'], '')
   var ul = document.createElement('ul')
-  var list = []
-  let i = -1
-  while (++i < 20) {
 
+  let i = -1
+  while (++i < 15) {
+    var li = document.createElement('li')
+    var a = document.createElement('a')
+    a.setAttribute('href', '/#/link' + i)
+    a.innerHTML = 'link' + i
+    li.appendChild(a)
+    ul.appendChild(li)
   }
+  navBar.appendChild(ul)
   var app = document.getElementById('app')
   app.appendChild(navBar)
 }

@@ -6,13 +6,13 @@ export function createMain () {
   var main = document.createElement('div')
   main.setAttribute('id', 'main')
   Router.init()
-  Router.route('/link', function () {
-    main.innerHTML = 'link'
-  })
-  Router.route('/', function () {
-    main.innerHTML = 'main'
-  })
-  main.innerHTML = 'main'
+  let i = -1
+  debugger
+  while (++i < 15) {
+    Router.route('/link' + i, function () {
+      main.innerHTML = 'link' + i
+    })
+  }
   var app = document.getElementById('app')
   app.appendChild(main)
 }

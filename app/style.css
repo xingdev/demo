@@ -1,6 +1,5 @@
 body {
     background : ghostwhite;
-    font-size  : 40px;
     height     : 1023px;
 }
 
@@ -15,10 +14,9 @@ body {
 }
 
 #navBar {
-    background : yellow;
+    background : whitesmoke;
     width      : 100px;
     height     : 100%;
-    color      : white;
     float      : left;
 }
 

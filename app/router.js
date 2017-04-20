@@ -9,7 +9,9 @@ Router.prototype.route = function (path, callback) {
 
 Router.prototype.refresh = function () {
   this.currentUrl = location.hash.slice(1) || '/'
-  this.routes[this.currentUrl]()
+  if (this.routes[this.currentUrl]) {
+    this.routes[this.currentUrl]()
+  }
 }
 
 Router.prototype.init = function () {
