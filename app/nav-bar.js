@@ -2,7 +2,7 @@ import _ from 'lodash'
 export function createNavBar () {
   var navBar = document.createElement('div')
   navBar.setAttribute('id', 'navBar')
-  navBar.innerHTML = _.join(['bar221212'], '')
+  navBar.innerHTML = _.join(['bar'], '')
   var ul = document.createElement('ul')
   var list = []
   let i = -1
