@@ -21,8 +21,14 @@ body {
 }
 
 #main {
-    background : green;
-    height     : 100%;
-    width      : 100%;
-    color      : white;
+    height : 100%;
+    width  : 100%; }
+
+.bar rect {
+    fill : steelblue;
+}
+
+.bar text {
+    fill : #FFFFFF;
+    font : 10px sans-serif;
 }

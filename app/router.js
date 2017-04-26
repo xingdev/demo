@@ -21,4 +21,5 @@ Router.prototype.init = function () {
 
 var Router = new Router()
 
+
 export default Router

@@ -5,7 +5,7 @@ export function createHeader () {
   var link = document.createElement('a')
   link.setAttribute('href', '/#/link')
   link.innerHTML = 'is link demo'
-  header.appendChild(link)
+  header.innerHTML = 'demo'
   var app = document.getElementById('app')
   app.appendChild(header)
 }

@@ -11,6 +11,4 @@ function component () {
   createNavBar()
   createMain()
 }
-
-
 component()
