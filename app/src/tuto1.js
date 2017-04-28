@@ -16,8 +16,13 @@ export default function chart () {
   var data = [4, 8, 15, 16, 23, 42]
   var rectHeight = 38
 
-  var g = svgContainer.selectAll('g').data(data).enter()
-    .append('g').attr('class', 'bar').attr('transform', (d, i) => `translate(${0},${i})`)
+  var linearY = d3.scaleLinear().domain([0, 100]).range([0, 300])
+  var axis = d3.axisLeft(linearY)
+
+  svgContainer.append('g').call(axis)
+
+  var g = svgContainer.selectAll('.bar').data(data).enter()
+    .append('g').attr('class', 'bar').attr('transform', (d, i) => `translate(${2},${i})`)
 
   var bar = g.append('rect').attr('x', 0).attr('y', (d, i) => rectHeight * i + 10).attr('width', d => d *
   10).attr('height', rectHeight).enter().append('rect').attr('x', (d, i) => {return i * rectHeight}).attr('y',
