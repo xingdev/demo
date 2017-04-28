@@ -1,25 +1,30 @@
-function Router () {
-  this.routes = {}
-  this.currentUrl = ''
-}
+class Router {
+  constructor () {
+    this.routes = {}
+    this.currentUrl = ''
+  }
 
-Router.prototype.route = function (path, callback) {
-  this.routes[path] = callback || function () {}
-}
+  init () {
+    window.addEventListener('load', this.refresh.bind(this), false)
+    window.addEventListener('hashchange', this.refresh.bind(this), false)
+  }
 
-Router.prototype.refresh = function () {
-  this.currentUrl = location.hash.slice(1) || '/'
-  if (this.routes[this.currentUrl]) {
-    this.routes[this.currentUrl]()
+  route (path, callback) {
+    this.routes[path] = callback || function () {}
+  }
+
+  refresh () {
+    this.currentUrl = location.hash.slice(1) || '/'
+    if (this.routes[this.currentUrl]) {
+      this.routes[this.currentUrl]()
+    }
   }
 }
 
-Router.prototype.init = function () {
-  window.addEventListener('load', this.refresh.bind(this), false)
-  window.addEventListener('hashchange', this.refresh.bind(this), false)
-}
+var RouterInit = new Router()
 
-var Router = new Router()
+RouterInit.init()
+
+export default RouterInit
 
 
-export default Router

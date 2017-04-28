@@ -19,12 +19,6 @@ module.exports = {
           {loader: 'css-loader'},
         ],
       },
-      {
-        test: /\.csv$/,
-        use: [
-          {loader: 'csv-loader'},
-        ],
-      },
     ]
   },
 }
