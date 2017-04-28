@@ -1,4 +1,4 @@
-export function createNavBar () {
+function createNavBar () {
   var navBar = document.createElement('div')
   navBar.setAttribute('id', 'navBar')
   var ul = document.createElement('ul')
@@ -16,8 +16,9 @@ export function createNavBar () {
     ul.appendChild(li)
   }
   navBar.appendChild(ul)
-  var app = document.getElementById('app')
-  app.appendChild(navBar)
+
+  return navBar
 }
 
-export default createNavBar
+var navBar = createNavBar()
+export default navBar

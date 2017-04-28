@@ -7,15 +7,15 @@ import router from './router'
 export function createMain () {
   var main = document.createElement('div')
   main.setAttribute('id', 'main')
-
-  var app = document.getElementById('app')
-  app.appendChild(main)
   router.route('/', () => {
     main.innerHTML = 'this is demo'
   })
   router.route('/link0', () => {
     chart()
   })
-}
 
-export default createMain
+  return main
+}
+var main = createMain()
+
+export default main

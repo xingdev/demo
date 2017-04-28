@@ -1,12 +1,15 @@
-import _ from 'lodash'
-export function createHeader () {
+function createHeader () {
   var header = document.createElement('div')
   header.setAttribute('id', 'header')
   var link = document.createElement('a')
   link.setAttribute('href', '/#/link')
   link.innerHTML = 'is link demo'
   header.innerHTML = 'demo'
-  var app = document.getElementById('app')
-  app.appendChild(header)
+
+  return header
 }
+
+var Header = createHeader()
+
+export default Header
 
