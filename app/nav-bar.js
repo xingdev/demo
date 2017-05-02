@@ -5,7 +5,7 @@ function createNavBar () {
 
   var i = -1
 
-  var textArr = ['首页', '产品', '关于']
+  var textArr = ['D3', 'CSS', '关于']
 
   while (++i < 3) {
     var li = document.createElement('li')

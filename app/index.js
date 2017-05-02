@@ -1,8 +1,8 @@
 import header from './header.js'
 import navBar from './nav-bar.js'
 import main from './main.js'
-import './style.css'
-function component () {
+import './style.less'
+function renderComponent () {
   var element = document.createElement('div')
   element.setAttribute('id', 'app')
   element.appendChild(header)
@@ -11,5 +11,6 @@ function component () {
   document.body.appendChild(element)
 }
 
-component()
-
+window.addEventListener('DOMContentLoaded', () => {
+  renderComponent()
+})
