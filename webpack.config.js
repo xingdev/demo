@@ -22,10 +22,10 @@ module.exports = {
         use: [
           {loader: 'style-loader'},
           {loader: 'css-loader'},
-          {loader: 'less-loader'},
         ],
       },
-    ]
+    ],
+
   },
 }
 
@@ -54,4 +54,4 @@ function getWebpackConfig (config) {
   }
 }
 
-getWebpackConfig(config)(webpackConfig)
+
